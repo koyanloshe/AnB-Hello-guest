@@ -1,0 +1,72 @@
+footer.main-footer-wrapper {
+	background-color: rgba(red(@footer_bg_color), green(@footer_bg_color), blue(@footer_bg_color), @footer_bg_color_opacity);
+	color: @footer_text_color;
+	h4.widget-title {
+		color: @footer_heading_text_color;
+	}
+
+	.sidebar {
+		// TAG CLOUND
+		.tagcloud a when (lightness(@footer_bg_color) > 50){
+			border: solid 1px darken(@footer_bg_color, 10);
+		}
+		.tagcloud a when (lightness(@footer_bg_color) <= 50){
+			border: solid 1px lighten(@footer_bg_color, 10);
+		}
+
+		// CONTACT FORM 7
+		.wpcf7-form when (lightness(@footer_bg_color) > 50){
+			input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="password"], input[type="tel"], textarea, select {
+				border: solid 1px darken(@footer_bg_color, 10);
+			}
+		}
+		.wpcf7-form when (lightness(@footer_bg_color) <= 50){
+			input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="password"], input[type="tel"], textarea, select {
+				border: solid 1px lighten(@footer_bg_color, 10);
+			}
+		}
+
+		// MAILCHIMP
+		.mc4wp-form when (lightness(@footer_bg_color) > 50){
+			input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="password"], input[type="tel"], textarea, select {
+				border: solid 1px darken(@footer_bg_color, 10);
+			}
+		}
+		.mc4wp-form when (lightness(@footer_bg_color) <= 50){
+			input[type="text"], input[type="search"], input[type="email"], input[type="url"], input[type="password"], input[type="tel"], textarea, select {
+				border: solid 1px lighten(@footer_bg_color, 10);
+			}
+		}
+		// FOOTER LOGO LINE
+		.footer-logo-line {
+			.footer-logo when(lightness(@bottom_bar_bg_color) > 30) {
+				a:before,
+				a:after {
+					border-top: solid 1px rgba(0,0,0, 0.1);
+				}
+			}
+			.footer-logo when(lightness(@bottom_bar_bg_color) <= 30) {
+				a:before,
+				a:after {
+					border-top: solid 1px rgba(255,255,255, 0.2);
+				}
+			}
+		}
+	}
+	.main-footer {
+		padding: @footer_padding_top 0 @footer_padding_bottom 0;
+		background-color: rgba(red(@footer_main_overlay_color), green(@footer_main_overlay_color), blue(@footer_main_overlay_color), @footer_main_overlay_opacity);
+	}
+	.footer-above-wrapper {
+		padding-top: @footer_above_padding_top;
+		padding-bottom: @footer_above_padding_bottom;
+		background-color: rgba(red(@footer_above_bg_color), green(@footer_above_bg_color), blue(@footer_above_bg_color), @footer_above_bg_color_opacity);
+		color: @footer_above_text_color;
+	}
+	.bottom-bar-wrapper {
+		background-color: rgba(red(@bottom_bar_bg_color), green(@bottom_bar_bg_color), blue(@bottom_bar_bg_color), @bottom_bar_bg_color_opacity);
+		padding-top: @bottom_bar_padding_top;
+		padding-bottom: @bottom_bar_padding_bottom;
+		color: @bottom_bar_text_color;
+	}
+}

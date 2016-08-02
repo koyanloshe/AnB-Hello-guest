@@ -1,0 +1,30 @@
+General css when mouse its not hover is 50% opacity black its CSS is
+
+.Layer_12 {
+  background-image: url("Layer 12.png");
+  opacity: 0.988;
+  position: absolute;
+  left: 113px;
+  top: 613px;
+  width: 624px;
+  height: 667px;
+  z-index: 49;
+}
+
+
+css when mouse its not hover is 20% opacity black its CSS is
+
+.Layer_11 {
+  background-image: url("Layer 11.png");
+  opacity: 0.902;
+  position: absolute;
+  left: 689px;
+  top: 372px;
+  width: 670px;
+  height: 402px;
+  z-index: 45;
+}
+
+
+
+this is machine generated CSS sometimes work or else we have to manually reduce the opacity for general no hover image 50% and on hover 20%
